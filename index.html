@@ -28,98 +28,100 @@
   </head>
   <body>
     <!-- Sign-up form start -->
-    <section class="newsletter__component container">
-      <div class="newsletter__main container">
-        <div class="newsletter__illustration" aria-hidden="true">
-          <picture>
-            <source
-              srcset="assets/images/illustration-sign-up-desktop.svg"
-              media="(min-width: 768px)"
-            />
+    <main class="main">
+      <section class="newsletter__component container">
+        <div class="newsletter__main container">
+          <div class="newsletter__illustration" aria-hidden="true">
+            <picture>
+              <source
+                srcset="assets/images/illustration-sign-up-desktop.svg"
+                media="(min-width: 768px)"
+              />
+              <img
+                src="assets/images/illustration-sign-up-mobile.svg"
+                alt="Newsletter illustration"
+              />
+            </picture>
+          </div>
+
+          <div class="newsletter__content container">
+            <h1 class="newsletter__heading">Stay updated!</h1>
+
+            <p class="newsletter__stats">
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
+
+            <ul class="newsletter__features-list">
+              <li class="newsletter__features-list-item flex">
+                <img src="assets/images/icon-list.svg" alt="" />
+                <span class="list-item__text">
+                  Product discovery and building what matters
+                </span>
+              </li>
+              <li class="newsletter__features-list-item flex">
+                <img src="assets/images/icon-list.svg" alt="" />
+                <span class="list-item__text">
+                  Measuring to ensure updates are a success
+                </span>
+              </li>
+              <li class="newsletter__features-list-item flex">
+                <img src="assets/images/icon-list.svg" alt="" />
+                <span class="list-item__text">And much more!</span>
+              </li>
+            </ul>
+
+            <!-- add novalidate keyword attr later -->
+            <form class="newsletter__form" action="" novalidate>
+              <label class="newsletter__label" for="newsletter__input">
+                <span>Email address</span>
+                <span
+                  class="error-message"
+                  id="email-error"
+                  aria-live="polite"
+                ></span>
+                <!-- 2nd child should display valid email required -->
+              </label>
+
+              <input
+                class="newsletter__input"
+                id="newsletter__input"
+                type="email"
+                required
+                placeholder="email@company.com"
+              />
+              <button class="newsletter__subscribe btn" type="submit">
+                Subscribe to monthly newsletter
+              </button>
+            </form>
+          </div>
+        </div>
+        <!-- we can also not include the button here and use the subscribe button and change its text content-->
+
+        <!-- set this to display none then display grid on event -->
+        <div class="newsletter__verification container">
+          <div class="newsletter__verification-content">
             <img
-              src="assets/images/illustration-sign-up-mobile.svg"
-              alt="Newsletter illustration"
+              src="assets/images/icon-success.svg"
+              alt=""
+              class="newsletter__success-illustration"
             />
-          </picture>
+            <h1 class="newsletter__message-success-heading">
+              Thanks for subscribing!
+            </h1>
+            <p class="newsletter__confirmation-desc">
+              A confirmation email has been sent to
+              <a href="#" class="newsletter__confirmation-email"
+                >ash@loremcompany.com.</a
+              >
+              Please open it and click the button inside to confirm your
+              subscription.
+            </p>
+          </div>
+
+          <button class="newsletter__dismiss btn">Dismiss message</button>
         </div>
-
-        <div class="newsletter__content container">
-          <h1 class="newsletter__heading">Stay updated!</h1>
-
-          <p class="newsletter__stats">
-            Join 60,000+ product managers receiving monthly updates on:
-          </p>
-
-          <ul class="newsletter__features-list">
-            <li class="newsletter__features-list-item flex">
-              <img src="assets/images/icon-list.svg" alt="" />
-              <span class="list-item__text">
-                Product discovery and building what matters
-              </span>
-            </li>
-            <li class="newsletter__features-list-item flex">
-              <img src="assets/images/icon-list.svg" alt="" />
-              <span class="list-item__text">
-                Measuring to ensure updates are a success
-              </span>
-            </li>
-            <li class="newsletter__features-list-item flex">
-              <img src="assets/images/icon-list.svg" alt="" />
-              <span class="list-item__text">And much more!</span>
-            </li>
-          </ul>
-
-          <!-- add novalidate keyword attr later -->
-          <form class="newsletter__form" action="" novalidate>
-            <label class="newsletter__label" for="newsletter__input">
-              <span>Email address</span>
-              <span
-                class="error-message"
-                id="email-error"
-                aria-live="polite"
-              ></span>
-              <!-- 2nd child should display valid email required -->
-            </label>
-
-            <input
-              class="newsletter__input"
-              id="newsletter__input"
-              type="email"
-              required
-              placeholder="email@company.com"
-            />
-            <button class="newsletter__subscribe btn" type="submit">
-              Subscribe to monthly newsletter
-            </button>
-          </form>
-        </div>
-      </div>
-      <!-- we can also not include the button here and use the subscribe button and change its text content-->
-
-      <!-- set this to display none then display grid on event -->
-      <div class="newsletter__verification container">
-        <div class="newsletter__verification-content">
-          <img
-            src="assets/images/icon-success.svg"
-            alt=""
-            class="newsletter__success-illustration"
-          />
-          <h1 class="newsletter__message-success-heading">
-            Thanks for subscribing!
-          </h1>
-          <p class="newsletter__confirmation-desc">
-            A confirmation email has been sent to
-            <a href="#" class="newsletter__confirmation-email"
-              >ash@loremcompany.com.</a
-            >
-            Please open it and click the button inside to confirm your
-            subscription.
-          </p>
-        </div>
-
-        <button class="newsletter__dismiss btn">Dismiss message</button>
-      </div>
-    </section>
+      </section>
+    </main>
     <!-- Sign-up form end -->
 
     <!-- Success message start -->
